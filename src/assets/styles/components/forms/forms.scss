@@ -1,0 +1,23 @@
+// Input styles
+.input {
+  padding: 14px 20px;
+  font-size: 1rem;
+  font-family: var(--body-font);
+  color: var(--text-color);
+  background-color: #fff;
+  border: 1px solid rgba(14, 63, 126, 0.08);
+  border-radius: var(--border-radius);
+  outline: none;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s ease;
+  
+  &:focus {
+    border-color: rgba(14, 63, 126, 0.15);
+    box-shadow: var(--shadow-md);
+  }
+  
+  &::placeholder {
+    color: #aaa;
+    font-weight: 300;
+  }
+} 

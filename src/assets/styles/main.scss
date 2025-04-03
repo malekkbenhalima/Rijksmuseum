@@ -1,0 +1,41 @@
+@use "sass:color";
+
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Raleway:wght@300;400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@import "./variables.scss";
+
+:root {
+  --container-width: #{$container-width};
+  --heading-font: #{$heading-font};
+  --body-font: #{$body-font};
+  --primary-color: #{$primary-color};
+  --secondary-color: #{$secondary-color};
+  --accent-color: #{$accent-color};
+  --text-color: #{$text-color};
+  --light-text-color: #{$light-text-color};
+  --border-radius: #{$border-radius};
+  --shadow-sm: #{$shadow-sm};
+  --shadow-md: #{$shadow-md};
+  --shadow-lg: #{$shadow-lg};
+}
+
+html, body {
+  font-family: $body-font;
+  font-size: 16px;
+  line-height: 1.6;
+  color: $text-color;
+  background-color: $secondary-color;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@import "./base/_index.scss";
+@import "./layout/_index.scss";
+@import "./components/_index.scss";
+@import "./features/_index.scss"; 

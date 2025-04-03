@@ -1,0 +1,41 @@
+// Load More Button Styles
+.load-more-container {
+  display: flex;
+  justify-content: center;
+  margin: 60px 0 10px;
+  
+  .btn--load-more {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 22px;
+    border: 1px solid #ddd;
+    background-color: white;
+    border-radius: 6px;
+    color: #222;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    transition: all 0.3s ease;
+    
+    &:hover {
+      border-color: #bbb;
+      background-color: #f9f9f9;
+    }
+    
+    &:active {
+      transform: translateY(1px);
+    }
+    
+    .load-more-content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .icon-more {
+      margin-right: 10px;
+      width: 18px;
+      height: 18px;
+    }
+  }
+}

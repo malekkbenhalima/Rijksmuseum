@@ -1,0 +1,58 @@
+@use "sass:color";
+
+// Button styles
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 24px;
+  background-color: #fff;
+  border: none;
+  border-radius: var(--border-radius);
+  font-family: var(--body-font);
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--primary-color);
+  cursor: pointer;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+  }
+  
+  &:active {
+    transform: translateY(0px);
+    box-shadow: var(--shadow-sm);
+  }
+  
+  &--primary {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    
+    &:hover {
+      background-color: darken(#7a5e35, 5%);
+    }
+  }
+  
+  &--search {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    font-weight: 500;
+    min-width: 120px;
+  }
+  
+  &--load-more {
+    background-color: #fff;
+    color: var(--primary-color);
+    border: 1px solid rgba(14, 63, 126, 0.1);
+    min-width: 160px;
+    height: 46px;
+    
+    &:disabled {
+      cursor: not-allowed;
+      opacity: 0.7;
+    }
+  }
+} 

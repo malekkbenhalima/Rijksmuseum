@@ -1,0 +1,50 @@
+// Variables
+$primary-color: #1a1a1a;
+$secondary-color: #f8f7f4;
+$accent-color: #7a5e35;
+$text-color: #2c2c2c;
+$light-text-color: #fff;
+$border-radius: 8px;
+$transition: all 0.3s ease;
+$container-width: 1200px;
+
+// Box shadow variables
+$shadow-sm: rgba(14, 63, 126, 0.04) 0px 0px 0px 1px, 
+            rgba(42, 51, 69, 0.04) 0px 1px 1px -0.5px, 
+            rgba(42, 51, 70, 0.04) 0px 2px 2px -1px, 
+            rgba(42, 51, 70, 0.04) 0px 4px 4px -2px;
+
+$shadow-md: rgba(14, 63, 126, 0.04) 0px 0px 0px 1px, 
+            rgba(42, 51, 69, 0.04) 0px 1px 1px -0.5px, 
+            rgba(42, 51, 70, 0.04) 0px 3px 3px -1.5px, 
+            rgba(42, 51, 70, 0.04) 0px 6px 6px -3px, 
+            rgba(14, 63, 126, 0.04) 0px 12px 12px -6px;
+
+$shadow-lg: rgba(14, 63, 126, 0.08) 0px 0px 0px 1px, 
+            rgba(42, 51, 69, 0.08) 0px 2px 2px -0.5px, 
+            rgba(42, 51, 70, 0.08) 0px 6px 6px -1.5px, 
+            rgba(42, 51, 70, 0.08) 0px 12px 12px -3px, 
+            rgba(14, 63, 126, 0.08) 0px 24px 24px -6px, 
+            rgba(14, 63, 126, 0.08) 0px 48px 48px -12px;
+
+// Fonts
+$heading-font: "Playfair Display", serif;
+$body-font: "Raleway", sans-serif;
+
+$breakpoints: (
+  xs: 480px,
+  sm: 768px,
+  md: 992px,
+  lg: 1200px,
+  xl: 1400px
+);
+
+@mixin respond-to($breakpoint) {
+  $value: map-get($breakpoints, $breakpoint);
+  
+  @if $value != null {
+    @media screen and (max-width: $value) {
+      @content;
+    }
+  }
+} 

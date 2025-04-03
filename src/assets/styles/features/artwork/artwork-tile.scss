@@ -1,0 +1,104 @@
+// Artwork Tile Styles
+.artwork-tile {
+  position: relative;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  background-color: #f0f0f0;
+  aspect-ratio: 1 / 1;
+  box-shadow: var(--shadow-md);
+  will-change: transform;
+  outline: none;
+  
+  &:focus-visible {
+    box-shadow: 0 0 0 3px var(--accent-color), var(--shadow-md);
+  }
+  
+  .artwork-title-overlay {
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.7) 70%);
+    padding: 25px;
+    width: 100%;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), 
+                transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  
+  &:hover .artwork-title-overlay,
+  &:focus .artwork-title-overlay {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  &:hover .artwork-img,
+  &:focus .artwork-img {
+    transform: scale(1.05);
+  }
+}
+
+.artwork-image {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+}
+
+.artwork-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.artwork-title {
+  color: var(--light-text-color);
+  font-family: var(--heading-font);
+  font-size: 1.15rem;
+  font-weight: 500;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.4;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+  margin-bottom: 4px;
+}
+
+.no-image-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f0f0;
+}
+
+.no-image-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #4d4d4d;
+  
+  .no-image-icon {
+    margin-bottom: 10px;
+    opacity: 0.8;
+    width: 24px;
+    height: 24px;
+  }
+  
+  span {
+    font-size: 15px;
+    font-weight: 600;
+  }
+} 

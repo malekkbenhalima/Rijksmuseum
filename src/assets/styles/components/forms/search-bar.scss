@@ -1,0 +1,129 @@
+// Search Bar Styles
+.search-container {
+  display: flex;
+  margin-bottom: 40px;
+  justify-content: flex-start;
+  width: 100%;
+  
+  .search-input-wrapper {
+    position: relative;
+    flex: 1;
+    margin-right: 15px;
+    
+    .icon-search {
+      position: absolute;
+      left: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #999;
+      pointer-events: none;
+      z-index: 1;
+      transition: all 0.3s ease;
+      width: 20px;
+      height: 20px;
+    }
+    
+    .search-input {
+      width: 100%;
+      padding-left: 42px;
+      padding-right: 40px;
+      transition: all 0.3s ease;
+      border-radius: 6px;
+      
+      &:focus {
+        box-shadow: 0 0 0 2px rgba(33, 33, 33, 0.1);
+        
+        & ~ .icon-search {
+          color: #333;
+        }
+      }
+    }
+    
+    .clear-button {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      padding: 6px;
+      border-radius: 50%;
+      cursor: pointer;
+      color: #999;
+      transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.05);
+        color: #333;
+      }
+      
+      .icon-clear {
+        display: block;
+        width: 16px;
+        height: 16px;
+      }
+    }
+  }
+  
+  .btn--search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    background-color: #222;
+    color: white;
+    transition: all 0.3s ease;
+    border: none;
+    width: 110px;
+    
+    &:hover {
+      background-color: #000;
+      transform: translateY(-1px);
+    }
+
+    &:disabled {
+      opacity: 0.9;
+      cursor: not-allowed;
+      transform: none;
+    }
+    
+    .search-btn-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+    }
+    
+    .spinner-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+    }
+    
+    .icon-arrow {
+      margin-left: 8px;
+      width: 16px;
+      height: 16px;
+      color: white;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .search-container {
+    flex-direction: column;
+    
+    .search-input-wrapper {
+      margin-right: 0;
+      margin-bottom: 15px;
+    }
+    
+    .btn--search {
+      width: 100%;
+    }
+  }
+} 
