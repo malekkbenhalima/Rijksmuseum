@@ -84,3 +84,27 @@ The project implements a custom icon registry system (`src/utils/iconRegistry.js
 - **Consistent styling** across the application with the AppIcon component
 - **Reduced bundle size** compared to importing icon libraries
 - **Simplified maintenance** when adding or updating icons 
+
+### CSS Architecture
+
+The project follows a modular SCSS architecture inspired by the 7-1 pattern to ensure maintainability and scalability:
+
+- **Organized directory structure**:
+  - `base/`: Core styles (typography, grid, accessibility)
+  - `components/`: Reusable component styles
+  - `layout/`: Layout-specific styles
+  - `features/`: Feature-specific styles
+
+- **Benefits**:
+  - **Separation of concerns**: Each file has a single responsibility
+  - **Maintainability**: Modular files make it easier to locate and update styles
+  - **Scalability**: New features can be added without affecting existing styles
+  - **Performance**: Styles are modularized and only loaded when needed
+  - **Consistency**: Shared variables ensure design consistency
+
+- **Implementation details**:
+  - CSS variables for theming and responsive design
+  - Scoped component styles for encapsulation
+  - Consistent naming conventions
+  - Cross-browser compatibility considerations
+  - Minimized specificity conflicts 
