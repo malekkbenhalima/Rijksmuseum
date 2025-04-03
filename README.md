@@ -2,6 +2,10 @@
 
 A Vue 3 SPA that showcases artworks from the Rijksmuseum collection.
 
+## Live Demo
+
+Check out the live version: [Rijksmuseum Gallery](https://rijksmuseum-app.netlify.app/)
+
 ## Features
 
 - Display artworks from the Rijksmuseum API
@@ -27,8 +31,8 @@ A Vue 3 SPA that showcases artworks from the Rijksmuseum collection.
 
 1. Clone this repository
    ```
-   git clone <repository-url>
-   cd rijksmuseum-app
+   git clone https://github.com/malekkbenhalima/Rijksmuseum.git
+   cd Rijksmuseum
    ```
 
 2. Install dependencies
