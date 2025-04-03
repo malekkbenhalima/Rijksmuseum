@@ -71,4 +71,16 @@ Rijksmuseum/
 │   ├── App.vue
 │   └── main.js
 └── package.json
-``` 
+```
+
+## Design Decisions
+
+### Icon Registry
+
+The project implements a custom icon registry system (`src/utils/iconRegistry.js`) that offers several benefits:
+
+- **Centralized management** of all SVG icons in one location
+- **On-demand loading** to improve performance by only loading used icons
+- **Consistent styling** across the application with the AppIcon component
+- **Reduced bundle size** compared to importing icon libraries
+- **Simplified maintenance** when adding or updating icons 
