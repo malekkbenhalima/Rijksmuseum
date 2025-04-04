@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app-container">
     <div class="skip-link-container">
       <a href="#main-content" class="skip-link">Skip to main content</a>
     </div>
@@ -22,7 +22,7 @@ export default {
 </script>
 
 <style lang="scss">
-#app {
+#app-container {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
